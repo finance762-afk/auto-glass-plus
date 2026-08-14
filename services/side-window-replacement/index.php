@@ -34,7 +34,7 @@ $faqs = [
     ],
     [
         'question' => 'Do you offer mobile side window replacement in Marion County?',
-        'answer' => 'Yes. We bring all the tools and replacement glass to your location anywhere in Marion County. You don't need to drive with a broken window or plastic taped over the opening. We come to your home, workplace, or wherever the vehicle is parked and complete the replacement on-site.'
+        'answer' => 'Yes. We bring all the tools and replacement glass to your location anywhere in Marion County. You don\'t need to drive with a broken window or plastic taped over the opening. We come to your home, workplace, or wherever the vehicle is parked and complete the replacement on-site.'
     ]
 ];
 
