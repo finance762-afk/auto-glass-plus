@@ -55,10 +55,10 @@ $serviceIcons = [
 
 /* Photo map per service slug (real client photos on disk) */
 $servicePhotos = [
-    'windshield-repair'       => ['file' => 'windshield-repair.jpg',      'alt' => 'Glossy sports car with a clear, undamaged windshield after chip repair at Auto Glass Plus in Ocala, FL'],
+    'windshield-repair'       => ['file' => 'windshield-repair.jpg',      'alt' => 'Black pickup truck with a clear, undamaged windshield after chip repair at Auto Glass Plus in Ocala, FL'],
     'windshield-replacement'  => ['file' => 'windshield-replacement.jpg', 'alt' => 'Vehicle with the windshield removed and cowl exposed during a windshield replacement at Auto Glass Plus in Ocala, FL'],
-    'side-window-replacement' => ['file' => 'side-window-replacement.jpg','alt' => 'SUV with the rear side door glass removed for a side window replacement by Auto Glass Plus in Ocala, FL'],
-    'rear-window-replacement' => ['file' => 'rear-window-replacement.jpg','alt' => 'Rear window back glass ready for installation during a rear window replacement at Auto Glass Plus in Ocala, FL'],
+    'side-window-replacement' => ['file' => 'side-window-replacement.jpg','alt' => 'Side profile of an SUV with clean, intact door and side windows after a side window replacement by Auto Glass Plus in Ocala, FL'],
+    'rear-window-replacement' => ['file' => 'rear-window-replacement.jpg','alt' => 'Replacement auto glass panels staged on stands before a rear window installation at Auto Glass Plus in Ocala, FL'],
 ];
 
 /* Service card bullet points (benefit-driven, 3 each) */
