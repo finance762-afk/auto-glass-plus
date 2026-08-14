@@ -10,7 +10,7 @@ $currentPage = 'services';
 $cssVersion  = '1';
 
 $pageTitle       = 'Rear Window Replacement in Ocala, FL | Auto Glass Plus';
-$metaDescription = 'Auto Glass Plus replaces rear windshields and back glass in Ocala, including defroster-equipped glass. Mobile service brings the shop to you. Call (352) 816-7221.';
+$pageDescription = 'Auto Glass Plus replaces rear windshields and back glass in Ocala, including defroster-equipped glass. Mobile service brings the shop to you. Call (352) 816-7221.';
 $canonicalUrl    = $siteUrl . '/services/rear-window-replacement/';
 $ogType          = 'website';
 $ogImage         = $siteUrl . '/assets/images/rear-window-replacement-ocala.jpg';

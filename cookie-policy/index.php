@@ -10,7 +10,7 @@ $currentPage = 'cookie-policy';
 $cssVersion  = '3';
 
 $pageTitle       = 'Cookie Policy | Auto Glass Plus';
-$metaDescription = 'How Auto Glass Plus uses cookies and similar technologies on our website. Browser cookie settings and opt-out options.';
+$pageDescription = 'How Auto Glass Plus uses cookies and similar technologies on our website. Browser cookie settings and opt-out options.';
 $canonicalUrl    = $siteUrl . '/cookie-policy/';
 $ogImage         = $siteUrl . '/assets/images/logo.png';
 
@@ -31,7 +31,7 @@ $schemaGraph = [
       "@id" => $canonicalUrl . "#webpage",
       "url" => $canonicalUrl,
       "name" => $pageTitle,
-      "description" => $metaDescription
+      "description" => $pageDescription
     ],
     [
       "@type" => "BreadcrumbList",

@@ -10,7 +10,7 @@ $currentPage = 'home';
 $cssVersion  = '2';
 
 $pageTitle       = 'Auto Glass Plus | Mobile Windshield Repair & Replacement in Ocala, FL';
-$metaDescription = 'Auto Glass Plus brings same-day mobile windshield repair and replacement to you across Ocala, FL. Insurance billing handled, lifetime workmanship warranty. Call (352) 816-7221.';
+$pageDescription = 'Auto Glass Plus brings same-day mobile windshield repair and replacement to you across Ocala, FL. Insurance billing handled, lifetime workmanship warranty. Call (352) 816-7221.';
 $canonicalUrl    = $siteUrl . '/';
 $ogType          = 'website';
 
@@ -71,8 +71,30 @@ $serviceBullets = [
 
 $tints = ['card-tint-1', 'card-tint-2', 'card-tint-3'];
 
+/* FAQPage schema */
+$faqMainEntity = [];
+foreach ($faqs as $faq) {
+    $faqMainEntity[] = [
+        "@type" => "Question",
+        "name" => $faq['question'],
+        "acceptedAnswer" => [
+            "@type" => "Answer",
+            "text" => $faq['answer']
+        ]
+    ];
+}
+$faqSchema = [
+    "@context" => "https://schema.org",
+    "@type" => "FAQPage",
+    "mainEntity" => $faqMainEntity
+];
+
 include $_SERVER['DOCUMENT_ROOT'] . '/includes/head.php';
 ?>
+
+<script type="application/ld+json">
+<?php echo json_encode($faqSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE); ?>
+</script>
 
 <style>
 /* ============================================================

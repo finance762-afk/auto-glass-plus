@@ -10,7 +10,7 @@ $currentPage = 'terms';
 $cssVersion  = '3';
 
 $pageTitle       = 'Terms of Service | Auto Glass Plus';
-$metaDescription = 'Terms of Service for Auto Glass Plus. Policies governing use of our website and auto glass repair services in Ocala, FL.';
+$pageDescription = 'Terms of Service for Auto Glass Plus. Policies governing use of our website and auto glass repair services in Ocala, FL.';
 $canonicalUrl    = $siteUrl . '/terms/';
 $ogImage         = $siteUrl . '/assets/images/logo.png';
 
@@ -33,7 +33,7 @@ $schemaGraph = [
       "@id" => $canonicalUrl . "#webpage",
       "url" => $canonicalUrl,
       "name" => $pageTitle,
-      "description" => $metaDescription
+      "description" => $pageDescription
     ],
     [
       "@type" => "BreadcrumbList",

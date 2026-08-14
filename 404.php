@@ -1,6 +1,9 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/config.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/functions.php';
+
+// Set 404 HTTP response code
+http_response_code(404);
 ?>
 <?php
 /* ------------------------------------------------------------------ *
@@ -10,7 +13,7 @@ $currentPage = '404';
 $cssVersion  = '2';
 
 $pageTitle       = 'Page Not Found | Auto Glass Plus';
-$metaDescription = 'The page you\'re looking for doesn\'t exist. Browse our auto glass services in Ocala or contact us for help.';
+$pageDescription = 'The page you\'re looking for doesn\'t exist. Browse our auto glass services in Ocala or contact us for help.';
 $canonicalUrl    = $siteUrl . '/404/';
 $ogType          = 'website';
 $ogImage         = $siteUrl . '/assets/images/logo.png';

@@ -6,13 +6,13 @@
 
   <!-- Primary SEO -->
   <title><?php echo isset($pageTitle) ? $pageTitle : $siteName . ' | ' . $primaryKeyword . ' in ' . $address['city'] . ', ' . $address['state']; ?></title>
-  <meta name="description" content="<?php echo isset($metaDescription) ? $metaDescription : $siteName . ' provides professional ' . strtolower($primaryKeyword) . ' services in ' . $address['city'] . ', ' . $address['state'] . '. Same-day mobile service. Call ' . $phone . ' for a free estimate.'; ?>">
+  <meta name="description" content="<?php echo isset($pageDescription) ? $pageDescription : $siteName . ' provides professional ' . strtolower($primaryKeyword) . ' services in ' . $address['city'] . ', ' . $address['state'] . '. Same-day mobile service. Call ' . $phone . ' for a free estimate.'; ?>">
   <link rel="canonical" href="<?php echo isset($canonicalUrl) ? $canonicalUrl : $siteUrl . '/'; ?>">
 
   <!-- Open Graph -->
   <meta property="og:type" content="<?php echo isset($ogType) ? $ogType : 'website'; ?>">
   <meta property="og:title" content="<?php echo isset($pageTitle) ? $pageTitle : $siteName . ' | ' . $primaryKeyword . ' in ' . $address['city']; ?>">
-  <meta property="og:description" content="<?php echo isset($metaDescription) ? $metaDescription : $siteName . ' provides professional auto glass repair and replacement in ' . $address['city'] . ', ' . $address['state'] . '.'; ?>">
+  <meta property="og:description" content="<?php echo isset($pageDescription) ? $pageDescription : $siteName . ' provides professional auto glass repair and replacement in ' . $address['city'] . ', ' . $address['state'] . '.'; ?>">
   <meta property="og:url" content="<?php echo isset($canonicalUrl) ? $canonicalUrl : $siteUrl . '/'; ?>">
   <meta property="og:image" content="<?php echo isset($ogImage) ? $ogImage : $siteUrl . '/assets/images/og-image.jpg'; ?>">
   <meta property="og:site_name" content="<?php echo $siteName; ?>">

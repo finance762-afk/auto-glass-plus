@@ -10,7 +10,7 @@ $currentPage = 'services';
 $cssVersion  = '1';
 
 $pageTitle       = 'Windshield Repair in Ocala, FL | Auto Glass Plus';
-$metaDescription = 'Auto Glass Plus repairs windshield chips and cracks in Ocala with mobile service. Most repairs completed in 30 minutes, often less than your deductible. Call (352) 816-7221.';
+$pageDescription = 'Auto Glass Plus repairs windshield chips and cracks in Ocala with mobile service. Most repairs completed in 30 minutes, often less than your deductible. Call (352) 816-7221.';
 $canonicalUrl    = $siteUrl . '/services/windshield-repair/';
 $ogType          = 'website';
 $ogImage         = $siteUrl . '/assets/images/windshield-repair-ocala.jpg';

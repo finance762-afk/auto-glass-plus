@@ -10,7 +10,7 @@ $currentPage = 'about';
 $cssVersion  = '2';
 
 $pageTitle       = 'About Auto Glass Plus | Mobile Auto Glass Service in Ocala, FL Since 1985';
-$metaDescription = 'Auto Glass Plus has served Ocala with professional mobile auto glass repair and replacement since 1985. Family-owned, licensed, and insured with lifetime workmanship warranties.';
+$pageDescription = 'Auto Glass Plus has served Ocala with professional mobile auto glass repair and replacement since 1985. Family-owned, licensed, and insured with lifetime workmanship warranties.';
 $canonicalUrl    = $siteUrl . '/about/';
 $ogImage          = $siteUrl . '/assets/images/shop-bay-professional-install.jpg';
 
@@ -20,7 +20,7 @@ $heroImagePreload = '/assets/images/shop-bay-professional-install.jpg';
 $schemaGraph = [
   "@context" => "https://schema.org",
   "@graph" => [
-    ["@type" => "WebPage", "@id" => $canonicalUrl . "#webpage", "url" => $canonicalUrl, "name" => $pageTitle, "description" => $metaDescription],
+    ["@type" => "WebPage", "@id" => $canonicalUrl . "#webpage", "url" => $canonicalUrl, "name" => $pageTitle, "description" => $pageDescription],
     ["@type" => "BreadcrumbList", "itemListElement" => [
       ["@type" => "ListItem", "position" => 1, "name" => "Home", "item" => $siteUrl . '/'],
       ["@type" => "ListItem", "position" => 2, "name" => "About", "item" => $canonicalUrl],

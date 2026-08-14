@@ -10,7 +10,7 @@ $currentPage = 'services';
 $cssVersion  = '1';
 
 $pageTitle       = 'Windshield Replacement in Ocala, FL | Auto Glass Plus';
-$metaDescription = 'Auto Glass Plus provides mobile windshield replacement in Ocala with OEM-quality glass and lifetime workmanship warranty. Completed in about an hour. Call (352) 816-7221.';
+$pageDescription = 'Auto Glass Plus provides mobile windshield replacement in Ocala with OEM-quality glass and lifetime workmanship warranty. Completed in about an hour. Call (352) 816-7221.';
 $canonicalUrl    = $siteUrl . '/services/windshield-replacement/';
 $ogType          = 'website';
 $ogImage         = $siteUrl . '/assets/images/windshield-replacement-ocala.jpg';

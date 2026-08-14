@@ -10,7 +10,7 @@ $currentPage = 'services';
 $cssVersion  = '1';
 
 $pageTitle       = 'Side Window Replacement in Ocala, FL | Auto Glass Plus';
-$metaDescription = 'Auto Glass Plus replaces door and side window glass in Ocala with mobile service. Keeps your vehicle secure and weather-tight. Call (352) 816-7221 for same-day service.';
+$pageDescription = 'Auto Glass Plus replaces door and side window glass in Ocala with mobile service. Keeps your vehicle secure and weather-tight. Call (352) 816-7221 for same-day service.';
 $canonicalUrl    = $siteUrl . '/services/side-window-replacement/';
 $ogType          = 'website';
 $ogImage         = $siteUrl . '/assets/images/side-window-replacement-ocala.jpg';

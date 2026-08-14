@@ -10,7 +10,7 @@ $currentPage = 'thank-you';
 $cssVersion  = '2';
 
 $pageTitle       = 'Thank You | Auto Glass Plus';
-$metaDescription = 'Thank you for contacting Auto Glass Plus. We\'ll be in touch soon with your auto glass estimate.';
+$pageDescription = 'Thank you for contacting Auto Glass Plus. We\'ll be in touch soon with your auto glass estimate.';
 $canonicalUrl    = $siteUrl . '/thank-you/';
 $ogType          = 'website';
 $ogImage         = $siteUrl . '/assets/images/logo.png';

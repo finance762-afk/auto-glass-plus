@@ -1,0 +1,15 @@
+# robots.txt for Auto Glass Plus
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Disallow utility directories
+Disallow: /includes/
+Disallow: /assets/js/
+
+# Disallow thank-you page (no search value)
+Disallow: /thank-you
+
+# Sitemap
+Sitemap: https://auto-glass-plus.pageone.cloud/sitemap.xml

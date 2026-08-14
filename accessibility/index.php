@@ -10,7 +10,7 @@ $currentPage = 'accessibility';
 $cssVersion  = '3';
 
 $pageTitle       = 'Accessibility Statement | Auto Glass Plus';
-$metaDescription = 'Auto Glass Plus is committed to digital accessibility. Learn about our WCAG 2.1 conformance and how to report accessibility issues.';
+$pageDescription = 'Auto Glass Plus is committed to digital accessibility. Learn about our WCAG 2.1 conformance and how to report accessibility issues.';
 $canonicalUrl    = $siteUrl . '/accessibility/';
 $ogImage         = $siteUrl . '/assets/images/logo.png';
 
@@ -31,7 +31,7 @@ $schemaGraph = [
       "@id" => $canonicalUrl . "#webpage",
       "url" => $canonicalUrl,
       "name" => $pageTitle,
-      "description" => $metaDescription
+      "description" => $pageDescription
     ],
     [
       "@type" => "BreadcrumbList",

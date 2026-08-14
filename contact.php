@@ -10,7 +10,7 @@ $currentPage = 'contact';
 $cssVersion  = '2';
 
 $pageTitle       = 'Contact Auto Glass Plus | Free Auto Glass Estimates in Ocala, FL';
-$metaDescription = 'Contact Auto Glass Plus for same-day mobile windshield repair and replacement in Ocala, FL. Call (352) 816-7221 or request a free estimate online. Insurance billing handled.';
+$pageDescription = 'Contact Auto Glass Plus for same-day mobile windshield repair and replacement in Ocala, FL. Call (352) 816-7221 or request a free estimate online. Insurance billing handled.';
 $canonicalUrl    = $siteUrl . '/contact/';
 $ogImage          = $siteUrl . '/assets/images/hero-mobile-glass-ocala.jpg';
 
@@ -18,7 +18,7 @@ $ogImage          = $siteUrl . '/assets/images/hero-mobile-glass-ocala.jpg';
 $schemaGraph = [
   "@context" => "https://schema.org",
   "@graph" => [
-    ["@type" => "WebPage", "@id" => $canonicalUrl . "#webpage", "url" => $canonicalUrl, "name" => $pageTitle, "description" => $metaDescription],
+    ["@type" => "WebPage", "@id" => $canonicalUrl . "#webpage", "url" => $canonicalUrl, "name" => $pageTitle, "description" => $pageDescription],
     ["@type" => "BreadcrumbList", "itemListElement" => [
       ["@type" => "ListItem", "position" => 1, "name" => "Home", "item" => $siteUrl . '/'],
       ["@type" => "ListItem", "position" => 2, "name" => "Contact", "item" => $canonicalUrl],

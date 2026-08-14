@@ -10,7 +10,7 @@ $currentPage = 'services';
 $cssVersion  = '1';
 
 $pageTitle       = 'Auto Glass Services in Ocala, FL | Auto Glass Plus';
-$metaDescription = 'Auto Glass Plus offers mobile windshield repair, windshield replacement, side window replacement, and rear window replacement throughout Ocala, FL. Same-day service available.';
+$pageDescription = 'Auto Glass Plus offers mobile windshield repair, windshield replacement, side window replacement, and rear window replacement throughout Ocala, FL. Same-day service available.';
 $canonicalUrl    = $siteUrl . '/services/';
 $ogType          = 'website';
 $ogImage         = $siteUrl . '/assets/images/shop-bay-professional-install.jpg';

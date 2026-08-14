@@ -10,7 +10,7 @@ $currentPage = 'privacy-policy';
 $cssVersion  = '3';
 
 $pageTitle       = 'Privacy Policy | Auto Glass Plus';
-$metaDescription = 'How Auto Glass Plus collects, uses, and protects your information. Privacy practices for our website and contact forms.';
+$pageDescription = 'How Auto Glass Plus collects, uses, and protects your information. Privacy practices for our website and contact forms.';
 $canonicalUrl    = $siteUrl . '/privacy-policy/';
 $ogImage         = $siteUrl . '/assets/images/logo.png';
 
@@ -32,7 +32,7 @@ $schemaGraph = [
       "@id" => $canonicalUrl . "#webpage",
       "url" => $canonicalUrl,
       "name" => $pageTitle,
-      "description" => $metaDescription
+      "description" => $pageDescription
     ],
     [
       "@type" => "BreadcrumbList",
