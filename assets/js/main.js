@@ -19,18 +19,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
   /* === Mobile Hamburger Nav Toggle === */
   const hamburger = document.querySelector('.hamburger');
-  const navLinks = document.querySelector('.nav-links');
-  if (hamburger && navLinks) {
+  const mobileNav = document.querySelector('.mobile-nav-menu');
+  if (hamburger && mobileNav) {
     hamburger.addEventListener('click', function() {
-      const isOpen = navLinks.classList.toggle('active');
+      const isOpen = mobileNav.classList.toggle('active');
       hamburger.classList.toggle('active');
       hamburger.setAttribute('aria-expanded', isOpen.toString());
       document.body.style.overflow = isOpen ? 'hidden' : '';
     });
     // Close nav when clicking a link
-    navLinks.querySelectorAll('a').forEach(function(link) {
+    mobileNav.querySelectorAll('a').forEach(function(link) {
       link.addEventListener('click', function() {
-        navLinks.classList.remove('active');
+        mobileNav.classList.remove('active');
         hamburger.classList.remove('active');
         hamburger.setAttribute('aria-expanded', 'false');
         document.body.style.overflow = '';
