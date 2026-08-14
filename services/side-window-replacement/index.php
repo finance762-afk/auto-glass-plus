@@ -405,7 +405,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/head.php';
         </div>
         <div class="reason-text">
           <h3>Mobile Service</h3>
-          <p>We come to your location in Ocala and complete the replacement on-site—no shop visit required.</p>
+          <p>Stop by our Ocala shop or have us come to your location — we complete the replacement either way.</p>
         </div>
       </div>
       

@@ -387,7 +387,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/head.php';
         <h2>When do you need full windshield replacement instead of just a repair?</h2>
         <p class="answer-block">Windshield replacement becomes necessary when the damage is larger than a quarter, located in the driver's direct sightline, or has penetrated both layers of glass. Cracks longer than six inches also require replacement, as repair won't restore structural integrity or safety.</p>
         <p>Your windshield is a critical safety component. It supports the roof during a rollover and helps airbags deploy correctly. A compromised windshield puts you and your passengers at risk. Auto Glass Plus uses OEM-quality glass that matches your vehicle's original specifications for fit, clarity, and safety features like rain sensors or heads-up display compatibility.</p>
-        <p>We bring the mobile replacement service to your location in Ocala or anywhere in Marion County. You don't lose a day sitting in a shop—we complete the job at your home or workplace while you go about your day.</p>
+        <p>Bring your vehicle to our Ocala shop for the fastest turnaround, or have our mobile unit meet you anywhere in Marion County. Either way, we complete most replacements in about an hour.</p>
       </div>
       <div class="split-image">
         <img

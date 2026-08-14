@@ -385,7 +385,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/head.php';
       <p class="hero-subtitle">
         Auto Glass Plus delivers same-day mobile windshield repair and replacement across Ocala &mdash;
         with insurance billing handled for you and a lifetime workmanship warranty on every install.
-        No shop visit, no runaround, no hidden fees.
+        Visit our Ocala shop or have us come to you &mdash; no runaround, no hidden fees.
       </p>
       <div class="hero-actions">
         <a href="#estimate-form" class="btn btn-accent btn-lg">Get a Free Estimate</a>
@@ -631,8 +631,8 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/head.php';
     <div class="trust-grid">
       <div class="trust-card" data-animate>
         <div class="trust-icon"><?php echo icon('truck', 24); ?></div>
-        <h3>Mobile Convenience</h3>
-        <p>Same-day service that comes to your driveway or workplace anywhere in Ocala and the surrounding 25-mile area &mdash; no waiting room, no lost afternoon.</p>
+        <h3>Shop or Mobile — Your Choice</h3>
+        <p>Come to our shop at 2528 NW 6th St for the fastest turnaround, or have same-day mobile service meet you at your driveway or workplace anywhere within 25 miles of Ocala.</p>
       </div>
       <div class="trust-card" data-animate>
         <div class="trust-icon"><?php echo icon('shield-check', 24); ?></div>

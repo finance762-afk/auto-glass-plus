@@ -350,8 +350,8 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/head.php';
 
     <div class="value-card">
       <?php echo icon('truck', 48); ?>
-      <h3>True Mobile Service</h3>
-      <p>We come to you — home, office, jobsite, wherever your vehicle is parked. No tow trucks, no rental cars, no wasted time sitting in a waiting room.</p>
+      <h3>Shop &amp; Mobile Service</h3>
+      <p>Swing by our shop at 2528 NW 6th St in Ocala, or have us come to you — home, office, or jobsite. Whichever is easier for you, the work and the warranty are the same.</p>
     </div>
 
     <div class="value-card">
