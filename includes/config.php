@@ -118,8 +118,8 @@ $colors = [
  * Company History
  * ------------------------------------------------------------------ */
 $ownerName       = 'Frank Catalanotto';
-$yearEstablished = null;   // not provided in intake
-$yearsInBusiness = null;   // not provided in intake
+$yearEstablished = 1985;   // sourced from client's branded apparel ("AUTO Glass Plus — Since 1985")
+$yearsInBusiness = (int) date('Y') - $yearEstablished;
 
 $businessHours = 'Monday–Friday: 8:00 AM – 6:00 PM';
 
