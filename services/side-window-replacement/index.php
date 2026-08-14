@@ -7,7 +7,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/functions.php';
  * Page-level setup — Side Window Replacement
  * ------------------------------------------------------------------ */
 $currentPage = 'services';
-$cssVersion  = '1';
 
 $pageTitle       = 'Side Window Replacement in Ocala, FL | Auto Glass Plus';
 $pageDescription = 'Auto Glass Plus replaces door and side window glass in Ocala with mobile service. Keeps your vehicle secure and weather-tight. Call (352) 816-7221 for same-day service.';

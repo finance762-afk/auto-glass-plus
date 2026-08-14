@@ -7,7 +7,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/functions.php';
  * Page-level setup — Cookie Policy
  * ------------------------------------------------------------------ */
 $currentPage = 'cookie-policy';
-$cssVersion  = '3';
 
 $pageTitle       = 'Cookie Policy | Auto Glass Plus';
 $pageDescription = 'How Auto Glass Plus uses cookies and similar technologies on our website. Browser cookie settings and opt-out options.';

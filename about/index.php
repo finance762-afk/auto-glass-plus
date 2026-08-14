@@ -7,7 +7,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/functions.php';
  * Page-level setup — About
  * ------------------------------------------------------------------ */
 $currentPage = 'about';
-$cssVersion  = '2';
 
 $pageTitle       = 'About Auto Glass Plus | Mobile Auto Glass Service in Ocala, FL Since 1985';
 $pageDescription = 'Auto Glass Plus has served Ocala with professional mobile auto glass repair and replacement since 1985. Family-owned, licensed, and insured with lifetime workmanship warranties.';

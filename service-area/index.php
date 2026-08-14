@@ -7,7 +7,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/functions.php';
  * Page-level setup — Service Area Page
  * ------------------------------------------------------------------ */
 $currentPage = 'service-area';
-$cssVersion  = '2';
 
 $pageTitle       = 'Service Areas | Auto Glass Plus | Mobile Service in Ocala & Surrounding Communities';
 $pageDescription = 'Auto Glass Plus serves Ocala, FL and surrounding Marion County communities with same-day mobile windshield repair and replacement. We come to you within a 25-mile radius. Call (352) 816-7221.';

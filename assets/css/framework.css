@@ -18,6 +18,13 @@
   font-display: swap;
   src: url('/assets/fonts/figtree.woff2') format('woff2');
 }
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/assets/fonts/caveat.woff2') format('woff2');
+}
 
 /* === CSS Custom Properties === */
 :root {
@@ -31,6 +38,9 @@
   --color-black: #111111;
   --color-dark: #1a1a2e;
   --color-dark-alt: #16213e;
+  /* Site chrome (header/footer/mobile menu) matches the logo's baked-in
+     black background so the logo never reads as a floating box. */
+  --color-chrome: #000000;
   --color-light: #f8f9fa;
   --color-gray: #6b7280;
   --color-gray-light: #e5e7eb;
@@ -43,6 +53,7 @@
   /* Typography — self-hosted pairing from build-plan design.fonts (v6.2) */
   --font-heading: 'Bricolage Grotesque', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
   --font-body: 'Figtree', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  --font-accent: 'Caveat', 'Segoe Script', cursive;
 
   /* Fluid Typography (v6.2) */
   --fs-h1: clamp(2.5rem, 5vw, 6rem);
@@ -178,16 +189,17 @@ p {
 .site-header {
   position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
   backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
-  background: rgba(26, 43, 60, 0.85);
+  background: rgba(0, 0, 0, 0.88);
   padding: var(--space-3) 0; transition: all var(--transition-base);
 }
 .site-header.scrolled {
-  background: rgba(26, 43, 60, 0.95);
+  background: rgba(0, 0, 0, 0.96);
   box-shadow: 0 2px 20px rgba(0,0,0,0.15); padding: var(--space-2) 0;
 }
 .header-inner { display: flex; align-items: center; justify-content: space-between; }
-.site-logo { height: 45px; width: auto; }
+.site-logo { height: 64px; width: auto; transition: height var(--transition-base); }
 .site-logo img { height: 100%; width: auto; }
+.site-header.scrolled .site-logo { height: 52px; }
 .nav-links { display: flex; align-items: center; gap: var(--space-6); list-style: none; }
 .nav-links a { color: var(--color-white); font-family: var(--font-heading); font-size: var(--font-size-sm); font-weight: 500; transition: opacity var(--transition-fast); }
 .nav-links a:hover { opacity: 0.8; color: var(--color-white); }
@@ -212,7 +224,7 @@ p {
 /* Mobile Full-Screen Menu */
 .mobile-nav-menu {
   position: fixed; inset: 0; z-index: 999;
-  background: rgba(26, 43, 60, 0.98);
+  background: rgba(0, 0, 0, 0.97);
   backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
   display: none; opacity: 0; transition: opacity var(--transition-base);
 }
@@ -281,6 +293,12 @@ section.hero {
 }
 .section-header h2 { margin-bottom: var(--space-4); }
 .section-header p { color: var(--color-gray); max-width: 600px; margin: 0 auto; }
+/* Accent script for emphasis words inside headings (3-font system) */
+.text-accent {
+  font-family: var(--font-accent); color: var(--color-accent);
+  font-size: 1.18em; font-weight: 600; line-height: 1;
+  text-transform: none; letter-spacing: 0;
+}
 
 /* === Service Cards === */
 .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); }
@@ -376,7 +394,7 @@ section.hero {
 .faq-item p { color: var(--color-gray); font-size: var(--font-size-sm); margin: 0; }
 
 /* === Footer === */
-.site-footer { background: var(--color-dark); color: rgba(255,255,255,0.8); padding: var(--space-16) 0 var(--space-8); }
+.site-footer { background: var(--color-chrome); color: rgba(255,255,255,0.8); padding: var(--space-16) 0 var(--space-8); }
 .footer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-8); margin-bottom: var(--space-12); }
 .footer-logo { display: block; }
 .footer-col h4 { color: var(--color-white); font-size: var(--font-size-base); margin-bottom: var(--space-4); }

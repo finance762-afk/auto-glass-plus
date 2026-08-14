@@ -7,7 +7,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/functions.php';
  * Page-level setup — Homepage
  * ------------------------------------------------------------------ */
 $currentPage = 'home';
-$cssVersion  = '2';
 
 $pageTitle       = 'Auto Glass Plus | Mobile Windshield Repair & Replacement in Ocala, FL';
 $pageDescription = 'Auto Glass Plus brings same-day mobile windshield repair and replacement to you across Ocala, FL. Insurance billing handled, lifetime workmanship warranty. Call (352) 816-7221.';

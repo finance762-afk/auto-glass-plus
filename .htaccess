@@ -5,6 +5,23 @@
 Options -Indexes
 DirectoryIndex index.php index.html
 
+# Clean URLs — the target-existence RewriteCond is MANDATORY (no !-d):
+# without it, real directories (/services/, /about/) rewrite to dir/.php and
+# 404 site-wide on Apache/Hostinger. nginx previews mask the bug.
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    RewriteCond %{REQUEST_URI} !^/assets/
+    RewriteCond %{REQUEST_URI} !^/includes/
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{DOCUMENT_ROOT}/$1.php -f
+    RewriteRule ^([^\.]+)$ $1.php [NC,L]
+    RewriteCond %{THE_REQUEST} /([^.]+)\.php [NC]
+    RewriteRule ^ /%1 [NC,L,R=301]
+</IfModule>
+
+ErrorDocument 404 /404.php
+
 # Security Headers
 <IfModule mod_headers.c>
     Header always set X-Content-Type-Options "nosniff"

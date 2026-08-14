@@ -7,7 +7,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/functions.php';
  * Page-level setup — Privacy Policy
  * ------------------------------------------------------------------ */
 $currentPage = 'privacy-policy';
-$cssVersion  = '3';
 
 $pageTitle       = 'Privacy Policy | Auto Glass Plus';
 $pageDescription = 'How Auto Glass Plus collects, uses, and protects your information. Privacy practices for our website and contact forms.';

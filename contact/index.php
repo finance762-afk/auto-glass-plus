@@ -7,7 +7,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/functions.php';
  * Page-level setup — Contact
  * ------------------------------------------------------------------ */
 $currentPage = 'contact';
-$cssVersion  = '2';
 
 $pageTitle       = 'Contact Auto Glass Plus | Free Auto Glass Estimates in Ocala, FL';
 $pageDescription = 'Contact Auto Glass Plus for same-day mobile windshield repair and replacement in Ocala, FL. Call (352) 816-7221 or request a free estimate online. Insurance billing handled.';

@@ -9,6 +9,7 @@
  * Identity
  * ------------------------------------------------------------------ */
 $slug     = 'auto-glass-plus';                 // exact build directory name
+$cssVersion = '5';                             // bump on every framework.css change
 $siteName = 'Auto Glass Plus';
 $tagline  = 'Same-Day Mobile Auto Glass in Ocala';
 $industry = 'Auto glass shop';

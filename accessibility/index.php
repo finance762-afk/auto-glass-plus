@@ -7,7 +7,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/functions.php';
  * Page-level setup — Accessibility Statement
  * ------------------------------------------------------------------ */
 $currentPage = 'accessibility';
-$cssVersion  = '3';
 
 $pageTitle       = 'Accessibility Statement | Auto Glass Plus';
 $pageDescription = 'Auto Glass Plus is committed to digital accessibility. Learn about our WCAG 2.1 conformance and how to report accessibility issues.';

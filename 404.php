@@ -10,7 +10,6 @@ http_response_code(404);
  * Page-level setup — 404 Error Page
  * ------------------------------------------------------------------ */
 $currentPage = '404';
-$cssVersion  = '2';
 
 $pageTitle       = 'Page Not Found | Auto Glass Plus';
 $pageDescription = 'The page you\'re looking for doesn\'t exist. Browse our auto glass services in Ocala or contact us for help.';

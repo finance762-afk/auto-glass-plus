@@ -7,7 +7,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/functions.php';
  * Page-level setup — Terms of Service
  * ------------------------------------------------------------------ */
 $currentPage = 'terms';
-$cssVersion  = '3';
 
 $pageTitle       = 'Terms of Service | Auto Glass Plus';
 $pageDescription = 'Terms of Service for Auto Glass Plus. Policies governing use of our website and auto glass repair services in Ocala, FL.';

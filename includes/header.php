@@ -14,7 +14,7 @@
 
       <!-- Logo -->
       <a href="/" class="site-logo" aria-label="<?php echo escAttr($siteName); ?> home">
-        <img src="/assets/images/logo.png" alt="<?php echo escAttr($siteName); ?> logo" width="180" height="45">
+        <img src="/assets/images/logo.png" alt="<?php echo escAttr($siteName); ?> logo" width="96" height="64">
       </a>
 
       <!-- Desktop Navigation -->

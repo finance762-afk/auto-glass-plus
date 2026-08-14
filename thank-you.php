@@ -7,7 +7,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/functions.php';
  * Page-level setup — Thank You Page
  * ------------------------------------------------------------------ */
 $currentPage = 'thank-you';
-$cssVersion  = '2';
 
 $pageTitle       = 'Thank You | Auto Glass Plus';
 $pageDescription = 'Thank you for contacting Auto Glass Plus. We\'ll be in touch soon with your auto glass estimate.';

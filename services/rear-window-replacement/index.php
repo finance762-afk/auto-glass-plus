@@ -7,7 +7,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/functions.php';
  * Page-level setup — Rear Window Replacement
  * ------------------------------------------------------------------ */
 $currentPage = 'services';
-$cssVersion  = '1';
 
 $pageTitle       = 'Rear Window Replacement in Ocala, FL | Auto Glass Plus';
 $pageDescription = 'Auto Glass Plus replaces rear windshields and back glass in Ocala, including defroster-equipped glass. Mobile service brings the shop to you. Call (352) 816-7221.';

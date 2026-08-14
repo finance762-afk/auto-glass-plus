@@ -7,7 +7,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/functions.php';
  * Page-level setup — Services Main
  * ------------------------------------------------------------------ */
 $currentPage = 'services';
-$cssVersion  = '1';
 
 $pageTitle       = 'Auto Glass Services in Ocala, FL | Auto Glass Plus';
 $pageDescription = 'Auto Glass Plus offers mobile windshield repair, windshield replacement, side window replacement, and rear window replacement throughout Ocala, FL. Same-day service available.';
