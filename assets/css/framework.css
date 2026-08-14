@@ -21,12 +21,12 @@
 
 /* === CSS Custom Properties === */
 :root {
-  /* Brand Colors */
-  --color-primary: #1a2b3c;
-  --color-primary-rgb: 26, 43, 60;
-  --color-secondary: #4d5e6f;
-  --color-secondary-rgb: 77, 94, 111;
-  --color-accent: #06b6d4;
+  /* Brand Colors (extracted from logo analysis) */
+  --color-primary: #0B5FA5;
+  --color-primary-rgb: 11, 95, 165;
+  --color-secondary: #0A2540;
+  --color-secondary-rgb: 10, 37, 64;
+  --color-accent: #F5A623;
   --color-white: #ffffff;
   --color-black: #111111;
   --color-dark: #1a1a2e;
@@ -43,6 +43,15 @@
   /* Typography — self-hosted pairing from build-plan design.fonts (v6.2) */
   --font-heading: 'Bricolage Grotesque', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
   --font-body: 'Figtree', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+
+  /* Fluid Typography (v6.2) */
+  --fs-h1: clamp(2.5rem, 5vw, 6rem);
+  --fs-h2: clamp(1.875rem, 3.5vw, 3.5rem);
+  --fs-h3: clamp(1.375rem, 2.5vw, 2rem);
+  --fs-body: clamp(1rem, 1.1vw, 1.125rem);
+  --fs-small: clamp(0.875rem, 1vw, 1rem);
+
+  /* Legacy font sizes (kept for component compatibility) */
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;
   --font-size-base: 1rem;
@@ -106,12 +115,30 @@ body {
 img { max-width: 100%; height: auto; display: block; }
 a { color: var(--color-primary); text-decoration: none; transition: color var(--transition-fast); }
 a:hover { color: var(--color-accent); }
-h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); font-weight: 700; line-height: 1.2; color: var(--color-dark); }
-h1 { font-size: var(--font-size-5xl); }
-h2 { font-size: var(--font-size-4xl); }
-h3 { font-size: var(--font-size-2xl); }
+
+/* MANDATORY: Prevent text overflow (v6.2) */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--color-dark);
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+}
+h1 { font-size: var(--fs-h1); letter-spacing: -0.02em; }
+h2 { font-size: var(--fs-h2); letter-spacing: -0.01em; }
+h3 { font-size: var(--fs-h3); }
 h4 { font-size: var(--font-size-xl); }
-p { margin-bottom: var(--space-4); }
+p {
+  margin-bottom: var(--space-4);
+  overflow-wrap: anywhere;
+}
+
+/* Focus visible outline (accessibility) */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
 
 /* === Skip Link Accessibility === */
 .skip-link {
@@ -122,7 +149,11 @@ p { margin-bottom: var(--space-4); }
 .skip-link:focus { top: var(--space-2); }
 
 /* === Container === */
-.container { max-width: 1200px; margin: 0 auto; padding: 0 5%; }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 4vw, 2rem);
+}
 .container-narrow { max-width: 900px; margin: 0 auto; padding: 0 5%; }
 
 /* === Buttons === */
@@ -203,7 +234,15 @@ p { margin-bottom: var(--space-4); }
 .hero-trust-item { display: flex; align-items: center; gap: var(--space-2); color: rgba(255,255,255,0.8); font-size: var(--font-size-sm); }
 
 /* === Section Defaults === */
-section { padding: var(--space-16) 0; }
+/* MANDATORY: Vertical padding prevents section collision/clipping (v6.2) */
+section {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(4rem, 10vh, 8rem) 0;
+}
+section.hero {
+  padding: 0; /* hero overrides — full bleed */
+}
 .section-header { text-align: center; margin-bottom: var(--space-12); }
 .section-header .eyebrow {
   display: inline-block; font-family: var(--font-heading); font-size: var(--font-size-xs);
