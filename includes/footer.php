@@ -102,11 +102,15 @@
 
     </div>
 
-    <!-- Footer Legal Row (STANDARD TIER — Privacy, Terms, Sitemap only) -->
+    <!-- Footer Legal Row -->
     <nav class="footer-legal-links" aria-label="Legal">
       <a href="/privacy-policy/">Privacy Policy</a>
       <span class="footer-legal-divider">|</span>
       <a href="/terms/">Terms of Service</a>
+      <span class="footer-legal-divider">|</span>
+      <a href="/cookie-policy/">Cookie Policy</a>
+      <span class="footer-legal-divider">|</span>
+      <a href="/accessibility/">Accessibility</a>
       <span class="footer-legal-divider">|</span>
       <a href="/sitemap.xml">Sitemap</a>
     </nav>
