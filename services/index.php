@@ -245,3 +245,80 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/head.php';
   .services-grid { grid-template-columns: 1fr; gap: var(--space-6); }
 }
 </style>
+
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php'; ?>
+
+<!-- Hero -->
+<section class="hero--services">
+  <div class="hero-inner">
+    <h1>Complete Auto Glass Services in Ocala, Florida</h1>
+    <p class="hero-answer">Auto Glass Plus provides mobile windshield repair, windshield replacement, side window replacement, and rear window replacement throughout Ocala and Marion County. We bring OEM-quality glass installation directly to your home or workplace, with most jobs completed in under an hour.</p>
+    <div class="hero-actions">
+      <a href="tel:+<?php echo $phoneRaw; ?>" class="btn btn-primary btn-lg">
+        <?php echo icon('phone', 20); ?>
+        Call <?php echo $phone; ?>
+      </a>
+      <a href="/contact/" class="btn btn-accent btn-lg">Get Free Estimate</a>
+    </div>
+  </div>
+</section>
+
+<!-- Services Grid -->
+<section class="services-section">
+  <div class="container">
+    <header class="section-header">
+      <span class="eyebrow">What We Do</span>
+      <h2>Which auto glass service do you need in <span class="text-accent">Ocala</span>?</h2>
+      <p class="answer-block">Auto Glass Plus offers four core auto glass services: windshield repair for chips and small cracks, full windshield replacement when damage is too severe to repair, side window replacement for door and quarter glass, and rear window replacement including defroster-equipped back glass. Each service is performed at your location with a lifetime workmanship guarantee.</p>
+    </header>
+
+    <div class="services-grid">
+      <?php
+      $tintIndex = 0;
+      foreach ($services as $service):
+        $slug = $service['slug'];
+        $tintClass = $tints[$tintIndex % 3];
+        $photo = $servicePhotos[$slug] ?? null;
+        $bullets = $serviceBullets[$slug] ?? [];
+        $iconName = $serviceIcons[$slug] ?? 'circle';
+        $tintIndex++;
+      ?>
+      <article class="service-card-with-image <?php echo $tintClass; ?> reveal-up reveal-delay-<?php echo (($tintIndex - 1) % 3) + 1; ?>">
+        <?php if ($photo): ?>
+        <div class="service-card__image">
+          <img
+            src="/assets/images/<?php echo escAttr($photo['file']); ?>"
+            srcset="/assets/images/<?php echo pathinfo($photo['file'], PATHINFO_FILENAME); ?>-480.webp 480w,
+                    /assets/images/<?php echo pathinfo($photo['file'], PATHINFO_FILENAME); ?>-960.webp 960w"
+            sizes="(max-width: 768px) 100vw, 400px"
+            alt="<?php echo escAttr($photo['alt']); ?>"
+            width="400"
+            height="220"
+            loading="lazy">
+        </div>
+        <?php endif; ?>
+        <div class="service-card__body">
+          <div class="service-card__icon">
+            <?php echo icon($iconName, 24); ?>
+          </div>
+          <h3><?php echo escHtml($service['name']); ?></h3>
+          <p class="service-card__desc"><?php echo escHtml($service['description']); ?></p>
+          <?php if (!empty($bullets)): ?>
+          <ul>
+            <?php foreach ($bullets as $bullet): ?>
+            <li><?php echo escHtml($bullet); ?></li>
+            <?php endforeach; ?>
+          </ul>
+          <?php endif; ?>
+          <a href="/services/<?php echo escAttr($slug); ?>/" class="service-card__cta">
+            Learn More
+            <?php echo icon('arrow-right', 16); ?>
+          </a>
+        </div>
+      </article>
+      <?php endforeach; ?>
+    </div>
+  </div>
+</section>
+
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
