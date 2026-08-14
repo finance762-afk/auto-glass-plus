@@ -469,10 +469,13 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/head.php';
         $iconNm = $serviceIcons[$slug] ?? 'wrench';
         $photo  = $servicePhotos[$slug];
         $bullets = $serviceBullets[$slug];
+        $photoBase = preg_replace('/\.jpg$/', '', $photo['file']);
       ?>
       <article class="service-card-with-image <?php echo $tint; ?> reveal-delay-<?php echo $delay; ?>" data-animate>
         <div class="service-card__image">
           <img src="/assets/images/<?php echo escAttr($photo['file']); ?>"
+               srcset="/assets/images/<?php echo escAttr($photoBase); ?>-480.webp 480w, /assets/images/<?php echo escAttr($photoBase); ?>-960.webp 960w"
+               sizes="(max-width: 600px) 100vw, (max-width: 1199px) 50vw, 25vw"
                alt="<?php echo escAttr($photo['alt']); ?>"
                width="600" height="360" loading="lazy">
         </div>
@@ -581,6 +584,8 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/head.php';
       <div class="about-media" data-animate>
         <span class="float-accent" aria-hidden="true"></span>
         <img src="/assets/images/shop-bay-professional-install.jpg"
+             srcset="/assets/images/shop-bay-professional-install-480.webp 480w, /assets/images/shop-bay-professional-install-960.webp 960w"
+             sizes="(max-width: 768px) 100vw, 45vw"
              alt="Auto Glass Plus vehicle inside a clean, professional Ocala service bay ready for glass installation"
              width="600" height="750" loading="lazy">
         <div class="about-badge">
