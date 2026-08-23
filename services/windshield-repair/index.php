@@ -489,6 +489,77 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/head.php';
   </div>
 </section>
 
+<!-- Related Services -->
+<section class="split-section alt-bg">
+  <div class="container">
+    <h2 style="text-align: center; margin-bottom: var(--space-4);">Other Auto Glass Services You May Need</h2>
+    <p style="max-width: 60ch; margin: 0 auto var(--space-8); text-align: center; color: var(--color-gray-dark);">Auto Glass Plus handles all vehicle glass work in Ocala—from full windshield replacement to side and rear window repairs.</p>
+
+    <div class="services-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); margin-top: var(--space-8);">
+      <?php
+      $relatedServices = array_filter($services, function($s) use ($currentService) {
+        return $s['slug'] !== $currentService['slug'];
+      });
+      $relatedServices = array_slice($relatedServices, 0, 3);
+
+      $serviceIcons = [
+        'windshield-repair' => 'wrench',
+        'windshield-replacement' => 'car',
+        'side-window-replacement' => 'truck',
+        'rear-window-replacement' => 'hammer',
+      ];
+
+      $servicePhotos = [
+        'windshield-repair' => ['file' => 'windshield-repair.jpg', 'alt' => 'Black pickup truck with a clear, undamaged windshield after chip repair at Auto Glass Plus in Ocala, FL'],
+        'windshield-replacement' => ['file' => 'windshield-replacement.jpg', 'alt' => 'Vehicle with the windshield removed and cowl exposed during a windshield replacement at Auto Glass Plus in Ocala, FL'],
+        'side-window-replacement' => ['file' => 'side-window-replacement.jpg', 'alt' => 'Side profile of an SUV with clean, intact door and side windows after a side window replacement by Auto Glass Plus in Ocala, FL'],
+        'rear-window-replacement' => ['file' => 'rear-window-replacement.jpg', 'alt' => 'Replacement auto glass panels staged on stands before a rear window installation at Auto Glass Plus in Ocala, FL'],
+      ];
+
+      $serviceBullets = [
+        'windshield-repair' => ['Stops cracks from spreading', 'Often less than your deductible', 'Restores factory strength'],
+        'windshield-replacement' => ['OEM-quality glass installed', 'Done in about an hour', 'Lifetime workmanship warranty'],
+        'side-window-replacement' => ['Door and quarter glass', 'Vacuumed clean of debris', 'Keeps your vehicle secure'],
+        'rear-window-replacement' => ['Defroster-line back glass', 'Precise factory-fit seal', 'Insurance billing handled'],
+      ];
+
+      $tints = ['card-tint-1', 'card-tint-2', 'card-tint-3'];
+
+      foreach ($relatedServices as $i => $service):
+        $slug = $service['slug'];
+        $tint = $tints[$i % 3];
+        $iconNm = $serviceIcons[$slug] ?? 'wrench';
+        $photo = $servicePhotos[$slug];
+        $bullets = $serviceBullets[$slug];
+        $photoBase = preg_replace('/\.jpg$/', '', $photo['file']);
+      ?>
+      <article class="service-card-with-image <?php echo $tint; ?>" style="border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition: transform var(--transition-base), box-shadow var(--transition-base); background: <?php echo $tint === 'card-tint-1' ? 'var(--color-card-tint-1)' : ($tint === 'card-tint-2' ? 'var(--color-card-tint-2)' : 'var(--color-card-tint-3)'); ?>;">
+        <div class="service-card__image" style="position: relative; aspect-ratio: 5 / 3; overflow: hidden;">
+          <img src="/assets/images/<?php echo escAttr($photo['file']); ?>"
+               srcset="/assets/images/<?php echo escAttr($photoBase); ?>-480.webp 480w, /assets/images/<?php echo escAttr($photoBase); ?>-960.webp 960w"
+               sizes="(max-width: 768px) 100vw, 33vw"
+               alt="<?php echo escAttr($photo['alt']); ?>"
+               width="400" height="240" loading="lazy">
+        </div>
+        <div class="service-card__body" style="padding: var(--space-8) var(--space-6) var(--space-6); text-align: center; display: flex; flex-direction: column; align-items: center; gap: var(--space-3);">
+          <div class="service-card__icon" style="width: 56px; height: 56px; border-radius: var(--radius-full); background: var(--color-white); box-shadow: var(--shadow-md); display: flex; align-items: center; justify-content: center; margin-top: -44px; margin-bottom: var(--space-1); color: var(--color-primary);">
+            <?php echo icon($iconNm, 26); ?>
+          </div>
+          <h3 style="color: var(--color-primary); margin: 0; font-size: var(--font-size-xl);"><?php echo escHtml($service['name']); ?></h3>
+          <p class="service-card__desc" style="color: var(--color-text); margin: 0; font-size: var(--font-size-sm); line-height: 1.55;"><?php echo escHtml($service['description']); ?></p>
+          <ul style="list-style: none; padding: var(--space-4) 0 0; margin: var(--space-1) 0 0; width: 100%; text-align: left; display: flex; flex-direction: column; gap: var(--space-2); border-top: 1px solid rgba(var(--color-secondary-rgb), 0.10);">
+            <?php foreach ($bullets as $b): ?>
+            <li style="font-size: var(--font-size-sm); color: var(--color-text); padding-left: var(--space-5); position: relative;"><span style="color: var(--color-accent); font-weight: 700; position: absolute; left: 0; top: 0;">✓</span> <?php echo escHtml($b); ?></li>
+            <?php endforeach; ?>
+          </ul>
+          <a href="/services/<?php echo escAttr($slug); ?>/" class="service-card__cta" style="margin-top: auto; color: var(--color-accent); font-weight: 600; font-size: var(--font-size-sm); border-top: 1px solid rgba(var(--color-secondary-rgb), 0.10); width: 100%; text-align: center; padding: var(--space-4) 0 0; transition: color var(--transition-base); text-decoration: none;">Learn more →</a>
+        </div>
+      </article>
+      <?php endforeach; ?>
+    </div>
+  </div>
+</section>
+
 <!-- CTA Banner -->
 <section class="cta-banner">
   <div class="container">
