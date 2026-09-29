@@ -151,9 +151,6 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
     Address: <?php echo $companyAddress; ?>
   </p>
 
-  <div class="legal-disclaimer">
-    This Cookie Policy is provided as a general template. We recommend reviewing this document with a licensed <?php echo $companyState; ?> attorney before publication.
-  </div>
 
 </article>
 

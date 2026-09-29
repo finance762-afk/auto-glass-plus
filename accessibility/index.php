@@ -169,9 +169,6 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
     Address: <?php echo $companyAddress; ?>
   </p>
 
-  <div class="legal-disclaimer">
-    This Accessibility Statement is provided as a general template. We recommend reviewing this document with a licensed <?php echo $companyState; ?> attorney and an accessibility consultant before publication.
-  </div>
 
 </article>
 
